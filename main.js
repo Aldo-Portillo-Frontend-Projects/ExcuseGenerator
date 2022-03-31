@@ -1,6 +1,10 @@
+//Linking Button
+const button = document.querySelector("#excuse-button");
+const excuse = document.querySelector("#excuse");
+
 //Create object
 
-const excuse = {
+const excuses = {
     leadIn: ["I'm sorry but", 
             "Please forgive me", 
             "I beg you a thousand pardons", 
@@ -79,7 +83,10 @@ let randomItem = (arr) => {
 
 //Assemble excuse
 let assembleExcuse = () => {
-    return `${randomItem(excuse.leadIn)} ${randomItem(excuse.perpetrator)} ${randomItem(excuse.delayFactor)}.`;
+    excuse.innerHTML = `${randomItem(excuses.leadIn)} ${randomItem(excuses.perpetrator)} ${randomItem(excuses.delayFactor)}.`;
 }
 
-console.log(assembleExcuse());
+//console.log(assembleExcuse());
+
+//Adding action to Button
+button.onclick = assembleExcuse;

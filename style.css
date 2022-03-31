@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    font-family: 'Roboto Mono', sans-serif, serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8em;
+    background-color: #080808;
+
+}
+
+span {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgb(217, 176, 255);
+}
+
+#title{
+    margin-top: 1.2rem;
+}
+
+/* From cssbuttons.io */
+button {
+    --glow-color: rgb(217, 176, 255);
+    --glow-spread-color: rgba(191, 123, 255, 0.781);
+    --enhanced-glow-color: rgb(231, 206, 255);
+    --btn-color: rgb(100, 61, 136);
+    border: .25em solid var(--glow-color);
+    padding: 1em 3em;
+    color: var(--glow-color);
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 1em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+    text-shadow: 0 0 .5em var(--glow-color);
+    position: relative;
+    transition: all 0.3s;
+    display: block;
+    position: relative;
+    margin: -20px auto;
+    user-select: none;
+    transition: all .05s linear;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+   }
+   
+   button::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--glow-spread-color);
+    filter: blur(2em);
+    opacity: .7;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+   }
+   
+   button:hover {
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 2em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+   }
+   
+   button:active {
+    box-shadow: 0 0 0.6em .25em var(--glow-color),
+           0 0 2.5em 2em var(--glow-spread-color),
+           inset 0 0 .5em .25em var(--glow-color);
+   }
+
+.container {
+    width: 40%;
+    height: auto;
+    margin: 5em;
+    background: #333333;
+    border-radius: 10px;
+}
+
+.container p {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.2em;
+    padding: 1.5em;
+    margin-bottom: 1.5em;
+    font-family: 'Bai Jamjuree', sans-serif;
+    color: #fff;
+}
+
+footer p {
+    font-size: .5em;
+    margin-top: 17em;
+    color: #fff;
+}
+
+/*Reactive*/
+@media only screen and (max-width: 480px) {
+    header h1 {
+        padding: .5em;
+        font-size: 1em;
+    }
+
+    .container {
+        width: 100%;
+        margin: 5em;
+    }
+}
